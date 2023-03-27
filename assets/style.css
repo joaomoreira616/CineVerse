@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(43, 43, 43);
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+}
+
+.options-top{
+    display: flex;
+    flex-direction: column;
+    width: 7rem;
+    height: 3rem;
+    gap: 1rem;
+}
+
+.option a svg{
+    margin-left: 0.5rem;
+    margin-top: 0.7rem;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
