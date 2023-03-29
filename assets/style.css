@@ -37,3 +37,37 @@ p{
     text-align: start;
     text-decoration: none;
 }
+
+.modalcontainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-modal{
+    width: 40rem;
+    height: 50rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 31, 31);
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    z-index: 9999;
+}
+
+.titlemodal{
+    text-align: center;
+}
+
+.img-modal{
+    width: 100%;
+    height: 380px;
+}
