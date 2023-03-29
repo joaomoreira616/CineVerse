@@ -111,7 +111,7 @@
                   <h5 class="topbrtxtlink">Neymar Jr - O Caos Perfeito</h5> 
                 </div>
                 <div class="element">
-                  <a href="#">
+                  <a class="click" href="#">
                     <img src="assets/img/neymar.png">
                   </a>
                   <h5 class="topbrtxtlink">Neymar Jr - O Caos Perfeito</h5> 
@@ -158,11 +158,43 @@
         <div id="modal-container" class="modalcontainer">
           <div class="content-modal">
             <h1 class="titlemodal">Neymar Jr - O Caos Perfeito</h1>
-            <img class="img-modal" src="assets/img/neymar.png">
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/neymar.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <iframe width="592" height="333" src="https://www.youtube.com/embed/4p9bs8Loxuw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <h4>Sinopse</h4>
+            <h5 class="sinopse-modal">Na série documental Neymar: O Caos Perfeito, mergulhamos de cabeça na história de um dos atletas mais bem pagos do mundo. A produção de 3 episódios busca mostrar pontos pouco explorados da jornada de Neymar JR., um dos maiores jogadores de futebol da atualidade.</h5>
+            <h4 class="mt-5">Elenco</h4>
+            <h6 class="sinopse-modal">Neymar Junior, Daniel Alves, Gabriel Medina, Thiago Silva, Marquinhos, Bruninho, Lionel Messi, David Beckham e Kylian Mbappe</h6>
           </div>
         </div>
       </div>
   </div>
+  <script>
+    function iniciomodal(modalid) {
+      const modal = document.getElementById(modalid);
+      console.log(modal);
+      modal.classList.add('mostrar')
+    }
+    const img = document.querySelector('.click');
+    img.addEventListener('click', function(){
+      iniciomodal('modal-container')
+    })
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -57,6 +57,7 @@ p{
     color: rgb(255, 255, 255);
     background-color: rgb(31, 31, 31);
     position: relative;
+    padding: 1.5rem;
     top: 0;
     left: 0;
     border-radius: 25px;
@@ -70,4 +71,11 @@ p{
 .img-modal{
     width: 100%;
     height: 380px;
+}
+
+.sinopse-modal{
+    margin-top: .5rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 2rem;
 }
