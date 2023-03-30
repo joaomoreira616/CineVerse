@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="background">
-    <header>
+    <header id="header">
       <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
           <a class=" navbar-brand" href="index.html">CineVerse</a>
@@ -18,9 +18,6 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#footer">Sobre nós</a>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Assistir agora
@@ -30,14 +27,14 @@
                 </ul>
               </li>
             </ul>
-              <a class="btn btn-outline-success" href="perfil/perfil.html">
+              <a class="perfil btn btn-outline-success" href="perfil/perfil.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                 </svg>
               </a>
-            </form>
-          </div>
+              <h5 class="exit">Encerrar sessão</h5>
+            </div>
         </div>
       </nav>
     </header>
@@ -97,37 +94,27 @@
       <div class="container-fluid">
         <section id="assistir">
           <h3 class="mt-5 topbrtxt">TOP-5 BRASIL HOJE</h3>
-            <div class="mt-3 topbr">
-              <div class="element">
-                  <a href="#">
-                    <img src="assets/img/neymar.png">
-                  </a>
+            <div class="mt-3 topbr"> 
+              <div id="open-modal" class="element">
+                  <img src="assets/img/neymar.png">
                   <h5 class="topbrtxtlink">Neymar Jr - O Caos Perfeito</h5> 
               </div>
-              <div class="element">
-                  <a href="#">
+              <div id="open-modal2" class="element">
+                  <img src="assets/img/neymar.png">
+                  <h5 class="topbrtxtlink">Neymar Jr - O Caos Perfeito</h5>
+              </div>
+              <div id="open-modal3" class="element">
                     <img src="assets/img/neymar.png">
-                  </a>
-                  <h5 class="topbrtxtlink">Neymar Jr - O Caos Perfeito</h5> 
-                </div>
-                <div class="element">
-                  <a class="click" href="#">
-                    <img src="assets/img/neymar.png">
-                  </a>
                   <h5 class="topbrtxtlink">Neymar Jr - O Caos Perfeito</h5> 
               </div>
-              <div class="element">
-                  <a href="#">
-                    <img src="assets/img/neymar.png">
-                  </a>
+              <div id="open-modal4" class="element">
+                  <img src="assets/img/neymar.png">
                   <h5 class="topbrtxtlink">Neymar Jr - O Caos Perfeito</h5> 
-                </div>
-                <div class="element">
-                  <a href="#">
-                    <img src="assets/img/neymar.png">
-                  </a>
+              </div>
+              <div id="open-modal5" class="element">
+                  <img src="assets/img/neymar.png">
                   <h5 class="topbrtxtlink">Neymar Jr - O Caos Perfeito</h5> 
-                </div>
+              </div>
             </div>
         </section>
       </main>
@@ -146,7 +133,7 @@
       <footer class="mt-5" id="footer">
           <div class="container d-flex justify-content-around">
             <p class="float-right">
-              <a href="index.html">
+              <a href="#header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
                   <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
                 </svg>
@@ -155,8 +142,9 @@
             <p>© Criado por João Vitor Moreira Mariano da Silva</p>
           </div>
         </footer>
-        <div id="modal-container" class="modalcontainer">
-          <div class="content-modal">
+        <div class="modalcontainer">
+          <div id="content-modal">
+            <button id="close-modal">X</button>
             <h1 class="titlemodal">Neymar Jr - O Caos Perfeito</h1>
             <div id="carouselExample" class="carousel slide">
               <div class="carousel-inner">
@@ -184,17 +172,7 @@
         </div>
       </div>
   </div>
-  <script>
-    function iniciomodal(modalid) {
-      const modal = document.getElementById(modalid);
-      console.log(modal);
-      modal.classList.add('mostrar')
-    }
-    const img = document.querySelector('.click');
-    img.addEventListener('click', function(){
-      iniciomodal('modal-container')
-    })
-  </script>
+    <script src="assets/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
   </body>
 </html>

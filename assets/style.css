@@ -6,6 +6,27 @@ p{
     background-color: rgb(35, 35, 35);
 }
 
+.nav-link img{
+    width: 50px;
+    height: 50px;
+}
+
+.perfil img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+}
+
+.exit{
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    top: 80%;
+    left: 95%;
+    transform: translate(-80% -95%);
+}
+
 .titlelanc{
     text-align: center;
     color: rgb(255, 255, 255);
@@ -38,7 +59,9 @@ p{
     text-decoration: none;
 }
 
+
 .modalcontainer{
+    display: none;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,.5);
@@ -46,12 +69,12 @@ p{
     top: 0px;
     left: 0px;
     z-index: 999;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content-modal{
+#content-modal{
+    display: none;
     width: 40rem;
     height: 50rem;
     color: rgb(255, 255, 255);
@@ -62,6 +85,35 @@ p{
     left: 0;
     border-radius: 25px;
     z-index: 9999;
+}
+
+#open-modal, #open-modal2, #open-modal3, #open-modal4, #open-modal5{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+#open-modal:hover, #open-modal2:hover, #open-modal3:hover, #open-modal4:hover, #open-modal5:hover{
+    opacity: 5;
+}
+
+#close-modal{
+    background-color: #505050;
+    padding: .3rem 0.9rem;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+    position: relative;
+    left: 100%;
+    top: -5%;
+    transition: 0.4s;
+}
+
+#close-modal:hover{
+    opacity: 2.3;
 }
 
 .titlemodal{

@@ -1,0 +1,39 @@
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(35, 35, 35);
+}
+
+#perfis{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    gap: 3rem;
+    top: 35%;
+    left: 18%;
+    transform: translate(0 -18% -35% 0);
+}
+
+.perfil{
+    color: #fff;
+}
+
+.perfil img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 4px solid #000;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.perfil img:hover{
+    opacity: 4;
+}
+
+.perfil h5{
+    margin-top: .5rem;
+    text-align: center;
+    font-weight: 400;
+}
